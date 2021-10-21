@@ -1,0 +1,21 @@
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 20px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.imagen {
+  border-radius: 250px;
+}
+
+.imagencard {
+  background: linear-gradient(to right, #7bc6cc, #be93c5);
+  border: black solid 2px;
+  padding: 20px;
+}
+
+.fuente {
+  text-align: center;
+}
