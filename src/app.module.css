@@ -5,9 +5,11 @@
 
 .title {
   text-align: center;
-  font-size: 70px;
+  margin: 20px;
+  font-size: 100px;
   font-weight: bold;
   font-family: schwifty;
   -webkit-text-stroke: 0.2px rgb(98, 199, 152);
   -webkit-text-fill-color: rgb(13, 233, 233);
+  text-shadow: 0 0 10px rgb(98, 199, 152), 0 0 20px rgb(13, 233, 233);
 }

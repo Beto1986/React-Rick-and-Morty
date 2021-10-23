@@ -5,6 +5,7 @@ import styles from "./app.module.css";
 
 function App() {
   const [data, setData] = useState([]);
+  const [textoInput, setTextoInput] = useState("");
 
   useEffect(() => {
     getAllCharacters(setData);
@@ -12,13 +13,33 @@ function App() {
 
   // console.log(data);
 
+  const handleInputChange = (e) => {
+    setTextoInput(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // console.log(textoInput);
+  };
+
+  const filterCharacters = data.filter((d) =>
+    d.name.toLowerCase().includes(textoInput.toLowerCase())
+  );
+
   return (
     <>
-      <h1 className={styles.title}>Rick and Morty</h1>
-      <form>
-        <input type="text" placeholder="Ingrese el personaje a buscar"></input>
+      <div className={styles.title}>Rick and Morty</div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Ingrese el personaje a buscar"
+          value={textoInput}
+          onChange={handleInputChange}
+        ></input>
       </form>
-      <Cards data={data} />
+      {/* <Cards data={data} /> */}
+      <Cards data={filterCharacters} textoInput={textoInput} />
     </>
   );
 }
