@@ -21,6 +21,25 @@
   transition: all 0.5s ease-in-out;
 }
 
+.loader {
+  text-align: right;
+}
+
+.characterimage {
+  background: linear-gradient(to right, #7bc6cc, #be93c5);
+  border: black solid 2px;
+  padding: 10px 50px;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.contenedorcharacterimage {
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+}
+
 /* .fuente {
   text-align: center;
 } */
