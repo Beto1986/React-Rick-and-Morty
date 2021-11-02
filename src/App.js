@@ -2,9 +2,8 @@ import Cards from "./components/cards/Cards";
 import { getAllCharacters } from "./services/Characters";
 import { useState, useEffect } from "react";
 import styles from "./app.module.css";
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Character from "./components/character/Character";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
@@ -33,25 +32,9 @@ function App() {
 
   return (
     <>
-      {/* <Cards data={data} /> */}
-
-      {/* <Cards
-        data={filterCharacters}
-        textoInput={textoInput}
-        isLoading={isLoading}
-      /> */}
       <Router>
-        {/* <Link to="/">Inicio</Link>
-        <Link to="/Character">Character</Link> */}
         <Switch>
-          <Route
-            // exact
-            // path="/character/:id/:name/:status/:image"
-            // path="/character/:id/:name/:status/:gender/:species/:originname/:image"
-            path="/character/:image"
-            component={Character}
-            // render={() => <Character />}
-          />
+          <Route path="/character/:id" component={Character}></Route>
           <Route
             exact
             path="/"

@@ -1,0 +1,11 @@
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 20px;
+  margin: 40px;
+  justify-content: center;
+}
+
+.loader {
+  text-align: right;
+}

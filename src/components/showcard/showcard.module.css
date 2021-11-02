@@ -1,0 +1,16 @@
+.imagencardfichatecnica {
+  background: linear-gradient(to right, #7bc6cc, #be93c5);
+  border: black solid 2px;
+  padding: 10px 50px;
+}
+
+.imagencardfichatecnica:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.contenedorcharacterimage {
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+}
