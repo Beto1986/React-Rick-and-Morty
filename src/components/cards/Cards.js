@@ -2,7 +2,7 @@ import Loader from "react-loader-spinner";
 import ShowCards from "../showcards/ShowCards";
 import styles from "../cards/cards.module.css";
 
-const Cards = ({ data, textoInput, isLoading }) => {
+const Cards = ({ data, setData, textoInput, isLoading }) => {
   if (data.length === 0)
     return (
       <p style={{ fontSize: 30, textAlign: "center" }}>
@@ -31,6 +31,8 @@ const Cards = ({ data, textoInput, isLoading }) => {
                 name={d.name}
                 id={d.id}
                 image={d.image}
+                data={data}
+                setData={setData}
               />
             </>
           ))

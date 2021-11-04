@@ -53,6 +53,7 @@ function App() {
                   data={filterCharacters}
                   textoInput={textoInput}
                   isLoading={isLoading}
+                  setData={setData}
                 />
               </>
             )}
